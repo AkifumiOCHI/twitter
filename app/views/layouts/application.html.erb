@@ -24,19 +24,20 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
          <li>
-          <!--<a><span class="glyphicon glyphicon-home"></span></a>-->
-          <%= link_to "ホーム", root_path %>
+          <a class="glyphicon glyphicon-home" href="/">ホーム</a>
+          <!--<%= link_to "ホーム", root_path %>-->
          </li>
          <li>
-          <%= link_to "モーメント", tweets_path %>
+          <a class="glyphicon glyphicon-flash" href="/tweets">モーメント</a>
+          <!--<%= link_to "モーメント", tweets_path %>-->
          </li>
          <li>
-          <!--a class="glyphicon glyphicon-bell"></a>-->
-          <%= link_to "通知", tweets_path %>
+          <a class="glyphicon glyphicon-bell" href="/tweets">通知</a>
+          <!--<%= link_to "通知", tweets_path %>-->
          </li>
          <li>
-          <!--<a class="glyphicon glyphicon-envelope"></a>-->
-          <%= link_to "メッセージ", tweets_path %>
+          <a class="glyphicon glyphicon-envelope" href="/tweets">メッセージ</a>
+          <!--<%= link_to "メッセージ", tweets_path %>-->
          </li>
         <!--
          <li>
@@ -56,10 +57,15 @@
           <!--<a href="./tweets/new/"><img src="<%= asset_path "tweet.png" %>"></a>-->
         </li>
       </ul>
+      
+      <div class="tweet">
+           <%= link_to image_tag('tweet.png', { :height => '30px', :border => '0', :alt => '新規ツイート'}), new_tweet_path %>
+      </div>
     </div>
    </div>
   </nav>
 </header>
+
 
 <%= yield %>
 

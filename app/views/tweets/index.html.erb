@@ -3,12 +3,14 @@
 
 
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-    <p><%= notice %></p>
+  <div class="wrapper col-md-3 col-sm-2">
     <h1>Tweet一覧</h1>
       <%= link_to "ツイートを作成する", new_tweet_path, class: 'btn btn-default' %>
       <br>
       <br>
+  </div>
+  <div class="wrapper col-md-8 col-sm-10">
+    <p><%= notice %></p>
     <% @tweets.each do |tweet| %>
     <div class="row">
       <p>tweet:<%= tweet.content %></p>
